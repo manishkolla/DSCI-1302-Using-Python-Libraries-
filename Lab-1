@@ -1,1 +1,6 @@
-
+string= "10,20,30,40,50"
+num=string.split(",")
+new_list=[]
+for x in num:
+    new_list.append(int(x))
+print("The updated list is: ", new_list)
