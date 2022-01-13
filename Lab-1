@@ -1,5 +1,8 @@
+#definign a set of numbers in the form of string
 string= "10,20,30,40,50"
+#splitting thr string based on comma and converting into a list
 num=string.split(",")
+#creating a new list and changing the numbers from string to integers and appending them into a list and printing it
 new_list=[]
 for x in num:
     new_list.append(int(x))
