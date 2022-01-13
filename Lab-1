@@ -1,4 +1,4 @@
-#definign a set of numbers in the form of string
+#defining a set of numbers in the form of string
 string= "10,20,30,40,50"
 #splitting thr string based on comma and converting into a list
 num=string.split(",")
