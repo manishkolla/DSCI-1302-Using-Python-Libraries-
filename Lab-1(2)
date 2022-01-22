@@ -1,0 +1,13 @@
+#taking a number as in[ut from the user
+#creating a method to store all the code for finding the multiple of the number which will be defined in the later set of code
+number= int(input("Enter a number to find all the divisors of a number below it: "))
+def b_divisors(number):
+  for y in range(1,number+1):
+    if number%y==0:
+      print("The multiples of", z, "are", y)
+b_divisors(number)
+
+#creating a list and appendig all the numbers preceeding the entered number and looping through that number and calling the method each time for that specific set of number
+list_num= ([x for x in range(1,number+1)])
+for z in list_num:
+  print(b_divisors(z))
