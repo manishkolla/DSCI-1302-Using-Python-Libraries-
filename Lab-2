@@ -1,0 +1,39 @@
+import numpy as np 
+#creating a class and passing row and column as parameters
+#creating an array with random set of negative and positive numbers
+class Game:
+  def __init__(self, r, c):
+    self.r = r
+    self.c = c
+    self.boardArray = np.random.randn(r,c)
+    self.boardList = [['-'] * c for i in range(r)]
+#creating an array and returning it
+  def __str__(self):
+    return str(self.boardArray)
+#creating a method and asking user for a selected row and column to check for negative numbers(bombs) over there
+#defining that all the negative numbers in the array are bombs
+#creating an if loop so that the selected number is negative the ending the game
+#if not then asking the user whether or not to continue the game
+#printing the raw model of matrix at the end of the game
+  def play(self):
+
+    row = int(input("Which row?\n")) - 1
+    col = int(input("Which column?\n")) - 1 
+    if self.boardArray[row][col] < 0:
+      print("BOMB DETECTED!!!!")
+      print("All the negative numbers where the bombs are placed")
+      print(self)
+    else:
+      proceed = input("🥺.. you didn't any bomb yet.\nDo you want to continue? Y/N ")
+      if proceed.lower() == 'y':
+        self.play()
+      else:
+        print("hey goodbye, whatever, hope to see you again")
+        print("All the negative numbers indicate where the bombs are placed")
+        print(self)
+
+#taking input from the user for total number of rows and columns and calling the method and class
+rows = int(input("How many rows?\n"))
+cols = int(input("How many columns?\n"))
+x = Game(rows,cols)
+x.play()
