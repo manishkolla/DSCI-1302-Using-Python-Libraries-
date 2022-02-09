@@ -1,0 +1,32 @@
+#creating a method to clean all the puntutation marks and excessive spaces in the paragraph and them appending each and every clear word to an empty string
+def clean(doc):
+  cleaned_doc = ""
+  bad_things = ["(", ")", ",", ".", "!", "?", "\'", "/", "[", "]","*", "\""]
+  for char in doc:
+    if char not in bad_things:
+      cleaned_doc += char
+
+  return cleaned_doc
+
+#counting the frequency of each word and then appending them to a dictionary
+#if the word is a number then passing the string, calculating the frequency of only words
+def wordcount(doc):
+  words = doc.lower().split(" ")
+  pear = {}
+#checking if the selected string is a number if so then passing it
+  for word in words:
+    if isNumber(word):
+      pass
+#if the selected word is a word then appending it to dictionary and counting its frequency
+#if the word has occured once then appending and assigning its frequency to 1
+    else: 
+      if word in pear:
+        pear[word] += 1
+      else: 
+        pear[word] = 1
+  print(pear)
+
+
+string_input = "Q1. (50 points) Develop a game class that: a) initializes by taking in integers r and c as input, this generates a field of r rows and c columns with a bomb at a randomly chosen row and column, b) allows the user to play this map by asking users to find the bomb. (Name this method play) ** 25 points extra credit implement the visual representation add the necesseary logic to play minesweeper Q2. (50 points) Implement function wordcount() that takes a string, and returns the frequency of each word as a dictionary. Note: 1. You should ignore the uppercase and lowercase. For example, 'Unicode' and 'unicode' are considered as the same word. 2. The punctuations and digits should NOT be counted. You only need to consider these punctuations: (),.!?'/[]\""
+#print(wordcount(string_input))
+print(wordcount(clean(string_input)))
