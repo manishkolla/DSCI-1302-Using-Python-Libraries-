@@ -21,7 +21,7 @@ class Game:
     col = int(input("Which column?\n")) - 1 
     if self.boardArray[row][col] < 0:
       print("BOMB DETECTED!!!!")
-      print("All the negative numbers where the bombs are placed")
+      print("All the negative numbers indicate where the bombs are placed")
       print(self)
     else:
       proceed = input("🥺.. you didn't any bomb yet.\nDo you want to continue? Y/N ")
