@@ -1,0 +1,109 @@
+ #importing modules to calulate the mean, median, mode, 
+ #standard devaition and variance
+import numpy as np
+from scipy import stats
+
+class GradeStatistics:
+  def __init__(self, data):
+    self.data = data
+
+    def mean(self):
+#making all the variables global so that they can be accessed in any method 
+            global s1,s2,s3,s4,s5
+#accessing the each row and assigning them as each student
+            s1=self[:1,0:]
+            s2=self[:2,0:]
+            s3=self[:3,0:]
+            s4=self[:4,0:]
+            s5=self[:5,0:]
+#finding the Average grades of each student in a series of 5 tests
+#and finding the average of entire class with all grades
+            print("---------Mean-----------")
+            print("The average grades of student 1 is", np.average(s1))
+            print("The average grades of student 2 is", np.average(s2))
+            print("The average grades of student 3 is", np.average(s3))
+            print("The average grades of student 4 is", np.average(s4))
+            print("The average grades of student 5 is", np.average(s5))
+            print("----------------")
+            print("The average grades of all the students is", np.average(self))
+            print()
+    mean(data)
+
+#finding the medain grades of each student in a series of 5 tests
+#and finding the median of entire class with all grades
+       
+    def median(self):
+        print("---------Median-----------")
+        print("The median grade of student 1 is", np.median(s1))
+        print("The median grade of student 2 is", np.median(s2))
+        print("The median grade of student 3 is", np.median(s3))
+        print("The median grade of student 4 is", np.median(s4))
+        print("The median grade of student 5 is", np.median(s5))
+        print("----------------")
+        print("The median grade of the class is", np.median(self))
+        print()
+    median(data)
+    
+#finding the standard devaition  grades of each student in a series of 5 tests
+#and finding the standard deviation of entire class with all grades
+    
+    def Std(self):
+        print("-------------Standard Deviation-----------")
+        print("The standard deviation of student 1 is", np.std(s1))
+        print("The standard deviation of student 2 is", np.std(s2))
+        print("The standard deviation of student 3 is", np.std(s3))
+        print("The standard deviation of student 4 is", np.std(s4))
+        print("The standard deviation of student 5 is", np.std(s5))
+        print("-------------")
+        print("The standard deviation of the class is", np.std(self))
+        print()
+    Std(data)
+    
+#finding the variance grades of each student in a series of 5 tests
+#and finding the variance of entire class with all grades   
+
+    def variance(self):
+        print("----------Variance------------")
+        print("The variance of student 1 is ", np.var(s1))
+        print("The variance of student 2 is ", np.var(s2))
+        print("The variance of student 3 is ", np.var(s3))
+        print("The variance of student 4 is ", np.var(s4))
+        print("The variance of student 5 is ", np.var(s5))
+        print("---------------")
+        print("The variance of the class is ", np.var(self))
+        print()
+    variance(data)
+    
+    def mode(self):
+        print("---------Mode----------")
+        print("The mode of the class is ", stats.mode(self))
+    mode(data)
+
+#Each row represents a series of 5 grades for one student
+#there are 5 students who wrote 5 set of tests
+matrix = GradeStatistics(np.array([[60,70,80,90,100],
+                                   [50,70,86,54,54],
+                                   [90,78,89,67,98],
+                                   [98,78,67,90,67],
+                                   [70,65,91,98,94]]))
+
+'''
+    Mean is used to get the average value among a large sum of values. It helps
+    to analyze and compare an individual with the entire set of data
+
+    Median is mostly used to get the central tendency of the data
+    it helps in getting the middle value of the data which
+    helps in predicting the average
+
+    Mode is used to get the frequency of the numbers. it
+    is used to get the most recurring element in the entire data
+
+    Standard deviation is used to get the deviation when comparing
+    multiple items with each other. In real life it is used by real 
+    estate agants for variation
+
+    Sometimes standard devaition may be negative, at that time 
+    variance can be used to make it a positive number. It is also used to 
+    get the difference between each number and the mean of the entire data
+    '''
+        
