@@ -1,0 +1,65 @@
+'''
+Activity-3
+'''
+
+import pandas as pd
+# import array
+array=[]
+array_2=[]
+car=pd.read_csv("adult.csv")
+# print(car.to_string())
+class_sal=car["class"]
+age=car["age"]
+
+#average age of adults who earn more than 50K
+for x in class_sal:
+  for y in age:
+    if x!="<=50K" or "<50K":
+      array.append(y)
+sum_1=sum(array)
+len_1=len(array)
+print("The average of the adults who earn more than or equal to 50K is: ", sum_1//len_1)
+
+#average age of adults who earn less than 50K
+for a in class_sal:
+  for b in age:
+    if a!=">=50K" or ">50K":
+      array_2.append(b)
+sum_2=sum(array_2)
+len_2=len(array_2)
+print("The average of the adults who earn less than or equal to 50K is: ", sum_2//len_2)
+
+
+#correlation
+corr=car.corr()
+print(corr[["age","hours-per-week"]])
+
+import pandas as pd
+
+#replacing variables with meaningful numbers
+cars=pd.read_csv("car.csv")
+a=cars.replace("vhigh",10000)
+b=a.replace("low",1000)
+c=b.replace("vgood",100)
+d=c.replace("med",2000)
+e=d.replace("small",340)
+f=e.replace("big",450)
+g=f.replace("unacc",900)
+h=g.replace("high", 200)
+i=h.replace("5more", 320)
+j=i.replace("more", 1200)
+k=j.replace("high", 600)
+l=k.replace("good", 1200)
+m=l.replace("acc", 12000)
+m==cars
+print(m.to_string())
+
+#correlation
+corr=m.corr()
+print(corr[["Buying","Maintenance","Safety"]])
+
+#Finding the median and correlation of the given data
+flowers=pd.read_csv("iris.csv")
+print("The median of petal length is: ", flowers["Petal_length"].median())
+print("The median of petal width is: ", flowers["Petal_width"].median())
+flowers.corr()
