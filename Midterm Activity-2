@@ -1,0 +1,65 @@
+'''
+Activity-2
+'''
+
+import numpy as np
+import random
+class BigMatrixMath:
+  empty_list=[]
+  new_list=[]
+
+  def addMatrix(empty_list):
+    global myArray
+    myArray=np.array=([])
+    myArray=np.arange(-70,160,1)
+    # myArray=np.random.randint(-70,160, (40,40))
+    #myArray=np.linspace(-70,160,90)
+    # print(type(myArray))
+    print(myArray)
+    empty_list=empty_list.append(myArray)
+  addMatrix(empty_list)
+
+  def printDimension(myArray):
+    print("-----------------------")
+    print("The dimension of the array is: ", myArray.ndim)
+    print("-----------------------")
+    print("The shape of the array is: ", myArray.shape)
+  printDimension(myArray)
+
+  def addMatrix2():
+    r= int(input("How many rows: "))
+    c=int(input("How many columns: "))
+    global myArray2
+    myArray2= np.ones((r,c))
+    print(myArray2)
+  addMatrix2()
+
+  def dotProductElgible(myArray,myArray2):
+    try:
+      print(myArray.dot(myArray2))
+    except ValueError:
+      print("Its not an appropiate matrix size for multiplication")
+      print("Make sure that the number of rows in 1st matrix the number of columns in the second one")
+  dotProductElgible(myArray,myArray2)
+  
+  import numpy as np
+  add1=np.array([[1,2],[3,4]])
+  add2=np.array([[5,6],[7,8]])
+
+  def combiningArray(add1,add2):
+      import numpy as np
+      finalArray=[]
+      print("---------------------")
+      print(add1, add2)
+      print("OR")
+      for x in add1:
+        finalArray.append(x)
+      for y in add2:
+        finalArray.append(y)
+      print([finalArray])
+  combiningArray(add1,add2)
+
+  def reformating():
+    formatarray=np.arange(12).reshape((3,4))
+    print(formatarray)
+  reformating()
