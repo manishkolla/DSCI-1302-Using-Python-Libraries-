@@ -28,6 +28,14 @@ for a in class_sal:
 sum_2=sum(array_2)
 len_2=len(array_2)
 print("The average of the adults who earn less than or equal to 50K is: ", sum_2//len_2)
+print("------------------")
+print("OR")
+
+ad_group = car.groupby(["class"])
+print(ad_group.mean())
+print(ad_group.median())
+print(ad_group.std())
+print(ad_group.corr())
 
 
 #correlation
