@@ -50,7 +50,8 @@ class BigMatrixMath:
       import numpy as np
       finalArray=[]
       print("---------------------")
-      print(add1, add2)
+      finalArray=add1.append(add2)
+      print(finalArray)
       print("OR")
       for x in add1:
         finalArray.append(x)
