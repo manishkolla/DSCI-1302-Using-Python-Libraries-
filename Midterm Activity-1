@@ -25,31 +25,34 @@ class Employees:
   employeeinfo()
 
 class Shape:
-  None
-  def Area():
-    None
+  def __init__(self):
+    pass
+  def area(self):
+    pass
 
 class Triangle(Shape):
   a=0
   b=0
+  #taking the sides of the triangle and angle as input
   print("Calculation for area and perimeter of triangle")
   a=int(input("Enter the length of one side: "))
   b=int(input("Enter the length of second side: "))
   angle=int(input("Enter the angle iin between 2 sided: "))
+  #calculating the area
   def area(a,b,angle):
     import math
     area=(a*b)/2
     area=((a*b)//2)*math.sin(angle)
     print("The area of the triangle is: ", area)
   area(a,b,angle)
-
+#calculating the perimeter
   def perimeter(a,b):
     c=int(input("Enter the length of third side: "))
     perimeter=a-b-c
     perimeter=a+b+c
     print("The perimeter of the triangle is: ", perimeter)
   perimeter(a,b)
-
+Finding the area and perimeter of the rectangle
 class Rectangle(Shape):
   height=10
   width=20
