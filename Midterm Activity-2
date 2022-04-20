@@ -42,11 +42,11 @@ class BigMatrixMath:
       print("Make sure that the number of rows in 1st matrix the number of columns in the second one")
   dotProductElgible(myArray,myArray2)
  
-import numpy as np
-add1=np.array([[1,2],[3,4]])
-add2=np.array([[5,6],[7,8]])
+  import numpy as np
+  add1=np.array([[1,2],[3,4]])
+  add2=np.array([[5,6],[7,8]])
 #combining two different array
-add1.append(add2)
+  add1.append(add2)
   
 #reformating a set of numbers in user defined form
   def reformating():
