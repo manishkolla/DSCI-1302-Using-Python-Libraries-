@@ -6,15 +6,16 @@ Activity-1
 class Employees:
   salary=int(input("Enter your salary: "))
   hours=int(input("How many hours have you worked this week: "))
-  def getinfo(salary,hours):
-    if salary<500:
-      salary+=10
-    if hours>6:
-      salary+=5
-    else:
-      return salary
-    print("The final salary is: ", salary)
-  getinfo(salary,hours)
+  def getInfo(self, salary, hours):
+    self.salary = float(salary)
+    self.hours = float(hours)
+  def addSal(self):
+    if self.salary < 500:
+      self.salary += 10
+  def addWork(self):
+    if self.hours > 6:
+      self.salary += 5
+  print("The final salary is: ", self.salary)
 
   def employeeinfo():
     name=str(input("What's your name: "))
