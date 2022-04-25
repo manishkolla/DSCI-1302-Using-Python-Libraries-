@@ -1,5 +1,5 @@
-# DSCI-1302
-Sentiment Analysis
+# Sentiment Analysis
+
 Procedure to run the code:
 1. Upload a text document with data in it and then run the program
 2. It downloads various machine learning packages and Natural Language Toolkit to ananlyze the data
